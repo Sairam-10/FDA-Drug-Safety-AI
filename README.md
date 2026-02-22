@@ -330,7 +330,7 @@ Please open an issue or submit a pull request.
 ## 📊 Dashboard Preview
 
 ### Executive Summary
-![Executive Dashboard](dashboard/screenshots/executive_summary.png)
+https://github.com/Sairam-10/FDA-Drug-Safety-AI/blob/main/page1_summary.png
 
 ### Model Performance
 ![Model Performance](dashboard/screenshots/model_performance.png)
@@ -377,3 +377,4 @@ Please open an issue or submit a pull request.
 - ✅ Code blocks with syntax highlighting
 - ✅ Tables for organization
 - ✅ Emojis for scanability
+
