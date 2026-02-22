@@ -333,10 +333,10 @@ Please open an issue or submit a pull request.
 https://github.com/Sairam-10/FDA-Drug-Safety-AI/blob/main/page1_summary.png
 
 ### Model Performance
-![Model Performance](dashboard/screenshots/model_performance.png)
+https://github.com/Sairam-10/FDA-Drug-Safety-AI/blob/main/page2_model.PNG
 
 ### Drug Safety Signals
-![Drug Safety Signals](dashboard/screenshots/drug_safety_signals.png)
+https://github.com/Sairam-10/FDA-Drug-Safety-AI/blob/main/page3_signals.PNG
 
 ---
 
@@ -377,4 +377,5 @@ https://github.com/Sairam-10/FDA-Drug-Safety-AI/blob/main/page1_summary.png
 - ✅ Code blocks with syntax highlighting
 - ✅ Tables for organization
 - ✅ Emojis for scanability
+
 
