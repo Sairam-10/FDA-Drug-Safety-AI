@@ -319,7 +319,7 @@ Please open an issue or submit a pull request.
 
 ## 👤 Author
 
-**[Your Name]**
+Sai Ram Kalluru
 - **Background**: Pharm.D + MSc Public Health
 - **Focus**: Healthcare Analytics, Pharmacovigilance, BI
 - **LinkedIn**: https://www.linkedin.com/in/ksairam10/
@@ -352,3 +352,4 @@ https://github.com/Sairam-10/FDA-Drug-Safety-AI/blob/main/page3_signals.PNG
 ---
 
 **⭐ If this project helped you, please star the repository!**
+
