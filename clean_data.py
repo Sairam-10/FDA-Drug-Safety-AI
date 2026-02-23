@@ -61,7 +61,11 @@ df = df.dropna(subset=['receive_date'])
 # convert to be numbers (handles strings, floats, and NaNs)
 df['patient_age'] = pd.to_numeric(df['patient_age'], errors='coerce')
 df = df[(df['patient_age'] > 0) & (df['patient_age'] < 120)]  # Reasonable age range
-df['outcome'] = pd.to_numeric(df['outcome'], errors='coerce').fillna(0).astype(int)
+#Convert to numeric first (handles strings like "1" or "2")
+temp_outcome = pd.to_numeric(df['outcome'], errors='coerce')
+# STRICT CHECK: Only a literal 1 counts as Fatal.
+# Everything else (0, 2, NaN, "Unknown") becomes 0.
+df['outcome'] = (temp_outcome == 1).astype(int)
 df['serious'] = pd.to_numeric(df['serious'], errors='coerce').fillna(0).astype(int)
 
 # 2. Map them to simple numbers: 1 for Male, 2 for Female, 0 for Unknown
@@ -83,4 +87,5 @@ print(f"Correlation between patient sex and Seriousness: {correlation:.4f}")
 
 # Save cleaned data
 df.to_csv('adverse_events_cleaned.csv', index=False)
+
 print("\n✅ Saved to adverse_events_cleaned.csv")
