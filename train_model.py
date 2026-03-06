@@ -67,11 +67,13 @@ print("\n💾 Saving model and predictions...")
 with open('severity_model.pkl', 'wb') as f:
     pickle.dump(model, f)
 
-# Create predictions for ALL patients (for Power BI)
-df['predicted_severity'] = model.predict(all_features)
-df['confidence'] = model.predict_proba(all_features)[:, 1] * 100  # % confidence
-df.to_csv('adverse_events_with_predictions.csv', index=False)
+# Create predictions for TEST patients ONLY (for Power BI)
+test_df = df.iloc[X_test.index].copy()
+test_df['predicted_severity'] = model.predict(X_test)
+test_df['confidence'] = model.predict_proba(X_test)[:, 1] * 100
+test_df.to_csv('adverse_events_with_predictions.csv', index=False)
 
 print("✅ Saved model as 'severity_model.pkl'")
 print("✅ Saved predictions as 'adverse_events_with_predictions.csv'")
+
 print("\n🎉 ALL DONE! You now have a trained AI model!")
